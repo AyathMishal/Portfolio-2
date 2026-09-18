@@ -14,4 +14,6 @@
 .academic-stat span,.academic-note span { font:.68rem/1.5 var(--mono); color:var(--muted); display:block; margin-top:12px; }
 .academic-note { border-right:0; border-bottom:0; background:var(--accent); color:#263216; }
 .academic-note span { color:#526400; margin:0; }.academic-note p { font-size:.85rem; line-height:1.5; margin:15px 0 0; }
+.transport { background:#d6e7f7; color:#17304b; }
+@media (min-width:1050px) { .project-grid { grid-template-columns:repeat(4,1fr); }.project-card { min-height:405px; }.project-card h3 { font-size:1.4rem; } }
 @media(max-width:780px) { .portrait-frame { height:265px; width:230px; } .skills,.about-grid,.academic { grid-template-columns:1fr; gap:40px; } .academic { padding:85px 0; } }
