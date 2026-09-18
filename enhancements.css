@@ -1,0 +1,17 @@
+/* Portrait and academic-detail enhancements */
+.portrait-frame { height:min(33vw,360px); width:min(27vw,310px); padding:9px; background:var(--accent); position:relative; transform:rotate(3deg); box-shadow:16px 16px 0 color-mix(in srgb,var(--ink) 12%,transparent); transition:transform .3s; }
+.portrait-frame:hover { transform:rotate(0) translateY(-6px); }
+.portrait-frame img { display:block; width:100%; height:100%; object-fit:cover; object-position:50% 28%; filter:contrast(1.04) saturate(.92); }
+.portrait-badge { position:absolute; right:-22px; bottom:21px; width:73px; aspect-ratio:1; display:grid; place-items:center; border-radius:50%; background:var(--ink); color:var(--accent); text-align:center; font:500 .62rem/1.25 var(--mono); letter-spacing:.08em; transform:rotate(-10deg); }
+.academic { padding:125px 0; display:grid; grid-template-columns:.8fr 1.2fr; gap:70px; }
+.academic-intro h2 { font-size:clamp(2.5rem,4.3vw,4rem); letter-spacing:-.06em; line-height:1; margin:0; }
+.academic-intro h2 em { font-family:'Playfair Display',serif; }
+.academic-intro > p:last-child { max-width:320px; line-height:1.6; color:var(--muted); margin-top:26px; }
+.academic-board { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--line); }
+.academic-stat,.academic-note { min-height:175px; padding:25px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.academic-stat:nth-child(2) { border-right:0; }.academic-stat:nth-child(3) { border-bottom:0; }
+.academic-stat strong { display:block; font-size:clamp(2.6rem,5vw,4.2rem); letter-spacing:-.08em; line-height:1; }
+.academic-stat span,.academic-note span { font:.68rem/1.5 var(--mono); color:var(--muted); display:block; margin-top:12px; }
+.academic-note { border-right:0; border-bottom:0; background:var(--accent); color:#263216; }
+.academic-note span { color:#526400; margin:0; }.academic-note p { font-size:.85rem; line-height:1.5; margin:15px 0 0; }
+@media(max-width:780px) { .portrait-frame { height:265px; width:230px; } .skills,.about-grid,.academic { grid-template-columns:1fr; gap:40px; } .academic { padding:85px 0; } }
